@@ -6,13 +6,20 @@
   "type": "module",
   "scripts": {
     "pgvector:setup": "node pgvector_setup.js",
-    "embedings": "node ollamaembedding.js"
+    "spider": "node spider.js",
+    "textsplitter": "node textsplitter.js",
+    "embedings": "node ollamaembedding.js",
+    "loadvectors": "node loadintopgvector.js",
+    "search": "node similaritysearch.js",
+    "ollama:llm": "node ollamallm.js",
+    "ollama:chain": "node ollamachain.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["LangChain", "Ollama", "Node.js"],
+  "author": "David Fekke",
   "license": "ISC",
   "dependencies": {
     "@langchain/community": "^0.0.27",
+    "cheerio": "^1.0.0-rc.12",
     "langchain": "^0.1.12",
     "pg": "^8.11.3"
   }
