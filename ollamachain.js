@@ -43,8 +43,21 @@ const pgvectorStore = await PGVectorStore.initialize(
 );
 
 const model = new ChatOllama({
-    baseUrl: "http://localhost:11434", // Default value
-    model: "llama2", // Default value
+  baseUrl: "http://localhost:11434", // Default value
+  model: "llama2", // Default value
+  callbacks: [
+    {
+      handleLLMNewToken(token) {
+        process.stdout.write(token, 'utf-8');
+      },
+      handleLLMError(e) {
+        console.error(e);
+      },
+      handleLLMEnd() {
+        console.log("");
+      },
+    },
+  ],
 });
 
 const retriever = pgvectorStore.asRetriever();
@@ -64,8 +77,7 @@ const chain = RunnableSequence.from([
   new StringOutputParser(),
 ]);
 
-const result = await chain.invoke("What can you tell me about Node.js?");
-
-console.log(result);
+// const logStream = 
+await chain.invoke("How can I add a AppDelegate class to a SwiftUI app?");
 
 pgvectorStore.end();

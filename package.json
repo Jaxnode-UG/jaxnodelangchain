@@ -12,15 +12,22 @@
     "loadvectors": "node loadintopgvector.js",
     "search": "node similaritysearch.js",
     "ollama:llm": "node ollamallm.js",
-    "ollama:chain": "node ollamachain.js"
+    "ollama:chain": "node ollamachain.js",
+    "agent:openai": "node agentopenaifunctions.js"
   },
-  "keywords": ["LangChain", "Ollama", "Node.js"],
+  "keywords": [
+    "LangChain",
+    "Ollama",
+    "Node.js"
+  ],
   "author": "David Fekke",
   "license": "ISC",
   "dependencies": {
     "@langchain/community": "^0.0.27",
+    "@langchain/openai": "^0.0.14",
     "cheerio": "^1.0.0-rc.12",
-    "langchain": "^0.1.12",
+    "dotenv": "^16.4.4",
+    "langchain": "^0.1.20",
     "pg": "^8.11.3"
   }
 }
