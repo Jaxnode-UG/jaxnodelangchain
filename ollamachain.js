@@ -45,6 +45,7 @@ const pgvectorStore = await PGVectorStore.initialize(
 const model = new ChatOllama({
   baseUrl: "http://localhost:11434", // Default value
   model: "llama2", // Default value
+  debug: true,
   callbacks: [
     {
       handleLLMNewToken(token) {
@@ -78,6 +79,6 @@ const chain = RunnableSequence.from([
 ]);
 
 // const logStream = 
-await chain.invoke("How can I add a AppDelegate class to a SwiftUI app?");
+await chain.invoke("How can I prevent XPath injection in my Java apps?");
 
 pgvectorStore.end();

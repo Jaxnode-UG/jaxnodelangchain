@@ -2,7 +2,7 @@ import { Ollama } from "@langchain/community/llms/ollama";
 
 const ollama = new Ollama({
     baseUrl: "http://localhost:11434", 
-    model: "llama2", 
+    model: "llama2"
 });
 
 const stream = await ollama.stream(
