@@ -1,7 +1,7 @@
 import { OllamaEmbeddings } from "@langchain/community/embeddings/ollama";
 
 const embeddings = new OllamaEmbeddings({
-  model: "llama2", // default value
+  model: "nomic-embed-text", // default value
   baseUrl: "http://localhost:11434", // default value
   requestOptions: {
     useMMap: true,
@@ -10,7 +10,7 @@ const embeddings = new OllamaEmbeddings({
   },
 });
 
-const documents = ["Hello World!", "Bye Bye"];
+const documents = ["Hello World!", "Bye Bye", "Why is the sky blue?"];
 
 const documentEmbeddings = await embeddings.embedDocuments(documents);
 const arraylengths = documentEmbeddings.map((x) => x.length);

@@ -14,7 +14,9 @@
     "ollama:llm": "node ollamallm.js",
     "ollama:chain": "node ollamachain.js",
     "agent:openai": "node agentopenaifunctions.js",
-    "pdfloader": "node pdfloader.js"
+    "pdfloader": "node pdfloader.js",
+    "example": "node example.js",
+    "nomic": "node nomicembedding.js"
   },
   "keywords": [
     "LangChain",
@@ -24,11 +26,11 @@
   "author": "David Fekke",
   "license": "ISC",
   "dependencies": {
-    "@langchain/community": "^0.0.27",
+    "@langchain/community": "^0.0.32",
     "@langchain/openai": "^0.0.14",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.4.4",
-    "langchain": "^0.1.20",
+    "langchain": "^0.1.21",
     "pdf-parse": "^1.1.1",
     "pg": "^8.11.3"
   }
