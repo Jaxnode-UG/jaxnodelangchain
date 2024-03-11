@@ -27,9 +27,11 @@
   "license": "ISC",
   "dependencies": {
     "@langchain/community": "^0.0.32",
+    "@langchain/nomic": "^0.0.3",
     "@langchain/openai": "^0.0.14",
     "cheerio": "^1.0.0-rc.12",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.4",
+    "hnswlib-node": "^1.4.2",
     "langchain": "^0.1.21",
     "pdf-parse": "^1.1.1",
     "pg": "^8.11.3"
